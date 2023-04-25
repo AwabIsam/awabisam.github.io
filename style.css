@@ -262,6 +262,9 @@ label:hover {
 	margin: 0;
 }
 
+.socials-container-projects {
+	display: none;
+}
 /* Contacts Section */
 
 .contact-section {
@@ -385,7 +388,7 @@ label:hover {
 			"r1c2"
 			"r1c3";
 		margin: 0;
-		padding-top: 100%;
+		padding-top: 110%;
 		padding-bottom: 10%;
 	}
 
@@ -418,7 +421,7 @@ label:hover {
 		display: none;
 	}
 }
-@media (max-width: 810) {
+@media (max-width: 810px) {
 	.showcase {
 		margin: 0;
 		width: 100vw;
@@ -491,7 +494,8 @@ label:hover {
 			"r1c2"
 			"r1c3";
 		margin: 0;
-		padding-top: 100%;
+		padding-top: 130%;
+		padding-bottom: 10%;
 	}
 
 	/* Footer */
