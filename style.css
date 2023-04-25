@@ -305,9 +305,115 @@ label:hover {
 	place-self: center;
 }
 
+.arrow-up {
+	display: none;
+}
 /* Media */
 
 @media (max-width: 1375px) {
+	.showcase {
+		margin: 0;
+		width: 100vw;
+	}
+
+	.showcase img {
+		width: 30rem !important;
+		height: 30rem !important;
+		left: 8%;
+	}
+
+	.showcase-name {
+		width: 19rem;
+		margin: 0 0 0 2rem;
+		font-size: 2rem;
+	}
+
+	.showcase span {
+		left: 10%;
+		bottom: 40%;
+	}
+
+	@keyframes typing {
+		100% {
+			left: 100%;
+			margin: 0 -20px 0 20px;
+		}
+	}
+
+	.side-bar {
+		display: none;
+	}
+
+	.view-proj-btn {
+		display: none;
+		position: absolute;
+		right: 5%;
+		bottom: 5%;
+		padding: 0.5rem;
+		border-radius: 2rem;
+		width: fit-content;
+		background: #d9d9d9;
+		color: #000 !important;
+		animation: quickfadeIn 2s normal;
+		z-index: 100;
+	}
+
+	@keyframes quickfadeIn {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	/* Projects section */
+
+	.projects-section {
+		position: relative;
+		overflow: scroll;
+	}
+
+	.projects-container {
+		grid-template-areas:
+			"r1c1"
+			"r1c2"
+			"r1c3";
+		margin: 0;
+		padding-top: 100%;
+	}
+
+	/* Footer */
+
+	.socials-container-projects {
+		position: relative;
+		display: grid;
+		grid-auto-flow: column;
+		justify-content: space-around;
+		margin-bottom: 2rem;
+	}
+
+	.arrow-up {
+		display: block;
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		border-radius: 100%;
+		padding: 0.5rem;
+		background: white;
+	}
+
+	.socials-container-projects a {
+		width: 50px;
+		height: fit-content;
+	}
+
+	.contact-section {
+		display: none;
+	}
+}
+@media (max-width: 810) {
 	.showcase {
 		margin: 0;
 		width: 100vw;
@@ -342,6 +448,7 @@ label:hover {
 	}
 
 	.view-proj-btn {
+		display: none;
 		position: absolute;
 		right: 5%;
 		bottom: 5%;
@@ -368,7 +475,7 @@ label:hover {
 
 	.projects-section {
 		position: relative;
-		overflow-y: scroll;
+		overflow: scroll;
 	}
 
 	.projects-container {
@@ -377,21 +484,33 @@ label:hover {
 			"r1c2"
 			"r1c3";
 		margin: 0;
+		padding-top: 100%;
 	}
 
-	/* .view-contacts-btn {
-		position: fixed;
-		right: 5%;
-		bottom: 0;
-		padding: 0.5rem;
-		border-radius: 2rem;
-		width: fit-content;
-		background: #d9d9d9;
-		color: #000;
-		z-index: 10;
-	} */
-
 	/* Footer */
+
+	.socials-container-projects {
+		position: relative;
+		display: grid;
+		grid-auto-flow: column;
+		justify-content: space-around;
+		margin-bottom: 2rem;
+	}
+
+	.arrow-up {
+		display: block;
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		border-radius: 100%;
+		padding: 0.5rem;
+		background: white;
+	}
+
+	.socials-container-projects a {
+		width: 50px;
+		height: fit-content;
+	}
 
 	.contact-section {
 		display: none;
