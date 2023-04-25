@@ -51,6 +51,7 @@ label:hover {
 		"Projects Projects";
 	place-content: start;
 	color: #d9d9d9;
+	z-index: -1;
 }
 
 .side-bar {
@@ -84,8 +85,9 @@ label:hover {
 .showcase img {
 	display: none;
 	position: absolute;
+	place-self: center;
+	z-index: 0;
 	animation: fadeIn 4.5s normal, rotate 5s normal;
-	left: 15%;
 }
 
 @keyframes fadeIn {
@@ -319,7 +321,9 @@ label:hover {
 	.showcase img {
 		width: 30rem !important;
 		height: 30rem !important;
-		left: 8%;
+		position: absolute;
+		place-self: center;
+		z-index: 0;
 	}
 
 	.showcase-name {
@@ -422,7 +426,9 @@ label:hover {
 	.showcase img {
 		width: 30rem !important;
 		height: 30rem !important;
-		left: -8%;
+		position: absolute;
+		place-self: center;
+		z-index: 0;
 	}
 
 	.showcase-name {

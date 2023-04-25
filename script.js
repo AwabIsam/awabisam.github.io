@@ -66,6 +66,8 @@ animationedText.addEventListener("animationend", () => {
 
 const animationedLotus = document.querySelector("#lotus");
 const toBeViewed = document.querySelector(".view-proj-btn");
-animationedLotus.addEventListener("animationend", () => {
-	toBeViewed.style.display = "block";
-});
+if (visualViewport.width < "1375") {
+	animationedLotus.addEventListener("animationend", () => {
+		toBeViewed.style.display = "block";
+	});
+}
