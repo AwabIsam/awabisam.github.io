@@ -1,0 +1,419 @@
+* {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	overflow: hidden;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+}
+
+section {
+	background: rgb(24, 0, 55);
+	background: linear-gradient(132deg, rgba(24, 0, 55, 1) 0%, rgba(0, 0, 0, 1) 100%);
+	background-attachment: fixed;
+}
+
+/* * Do the contact us page* */
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	width: 50px;
+	height: 50px;
+}
+
+button {
+	appearance: none;
+	-webkit-appearance: none;
+	border: none;
+}
+
+label {
+	width: max-content;
+	height: max-content;
+}
+
+label:hover {
+	cursor: pointer;
+}
+
+.showcase-section {
+	display: grid;
+	grid-template-areas:
+		"side-bar showcase"
+		"Projects Projects";
+	place-content: start;
+	color: #d9d9d9;
+}
+
+.side-bar {
+	grid-area: side-bar;
+	position: fixed;
+	display: grid;
+	grid-column: auto;
+	align-content: space-around;
+	margin-left: 3rem;
+	width: fit-content;
+	height: 100vh;
+}
+
+.side-bar .line {
+	width: 5rem;
+	height: 0.25rem;
+	background-color: #d9d9d9;
+	border-radius: 2rem;
+}
+
+.showcase {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	grid-area: showcase;
+	display: grid;
+	margin: 0 15rem;
+	align-items: center;
+}
+
+.showcase img {
+	display: none;
+	position: absolute;
+	animation: fadeIn 4.5s normal, rotate 5s normal;
+	left: 15%;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		filter: blur(15px);
+	}
+
+	100% {
+		opacity: 1;
+		filter: blur(0px);
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.showcase-name {
+	/* *for Typing animation*/
+	position: relative;
+
+	width: 48rem;
+	margin-bottom: 7rem;
+	font-size: 5rem;
+	font-weight: bolder;
+}
+
+.showcase-name::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	left: 0;
+	width: 100%;
+	background: rgb(24, 0, 55);
+	background: linear-gradient(132deg, rgba(24, 0, 55, 1) 0%, rgba(0, 0, 0, 1) 100%);
+	background-attachment: fixed;
+	border-left: 4px solid #d9d9d9;
+	animation: typing 2s steps(15) forwards;
+}
+
+@keyframes typing {
+	100% {
+		left: 100%;
+		margin: 0 -20px 0 20px;
+	}
+}
+
+.showcase span {
+	display: none;
+	position: absolute;
+	left: 50%;
+	bottom: 35%;
+	font-size: 2rem;
+}
+
+.showcase span::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	left: 0;
+	width: 100%;
+	background: rgb(24, 0, 55);
+	background: linear-gradient(132deg, rgba(24, 0, 55, 1) 0%, rgba(0, 0, 0, 1) 100%);
+	background-attachment: fixed;
+	border-left: 4px solid #d9d9d9;
+	animation: typing 2s steps(15) forwards;
+}
+
+.label-area {
+	width: 170%;
+	height: 200%;
+}
+
+.view-proj-btn {
+	display: none;
+}
+
+/* Projects Section */
+
+#section-2 {
+	display: grid;
+	place-content: center;
+}
+
+.projects-section {
+	height: 100vh;
+	color: rgb(24, 24, 24);
+}
+
+.projects-container a {
+	/* margin-bottom: 3rem; */
+	display: grid;
+	place-content: center;
+	color: #eeeeee;
+	width: 10rem;
+	height: 2.5rem;
+}
+
+.projects-container {
+	overflow: visible;
+	margin-left: 7rem;
+	width: max-content;
+	display: grid;
+	grid-template-areas: "r1c1 r1c2 r1c3";
+	place-content: center;
+	grid-column-gap: 2rem;
+	grid-row-gap: 1rem;
+	z-index: 10;
+}
+
+#project-item-1 h1 {
+	margin: 0.5rem;
+}
+
+#project-item-2 h1 {
+	margin: 0.5rem;
+}
+
+#project-item-3 h1 {
+	margin: 0.5rem;
+}
+
+#project-btn-1 {
+	margin: 0 auto 1rem auto;
+	border-radius: 12px;
+	background: #00274c;
+}
+
+#project-btn-2 {
+	margin: 0 auto 1rem auto;
+	border-radius: 12px;
+	background: #00274c;
+}
+
+#project-btn-3 {
+	margin: 0 auto 1rem auto;
+	border-radius: 12px;
+	background: #00274c;
+}
+
+.project-grid-items {
+	display: grid;
+	place-content: center;
+	width: 22rem;
+	min-height: 12rem;
+	border-radius: 1rem;
+	grid-row-gap: 2rem;
+	background: rgb(153, 153, 153);
+	text-align: center;
+	color: white;
+}
+
+.project-grid-items img {
+	width: 3rem;
+	height: 3rem;
+	margin-top: 2rem;
+}
+
+.project-grid-items:not(:first-child) img {
+	filter: invert();
+}
+
+.project-grid-items p {
+	padding: 1rem;
+	margin: 0;
+}
+
+/* Contacts Section */
+
+.contact-section {
+	overflow: visible;
+	position: relative;
+	display: grid;
+	place-content: center;
+	height: 8vh;
+	color: #d9d9d9;
+	z-index: 1;
+}
+
+.socials-img {
+	position: absolute;
+	bottom: 50%;
+	left: 15%;
+	z-index: -2;
+	width: 150px;
+	height: 150px;
+}
+
+.socials-container {
+	display: grid;
+	place-content: center;
+	grid-auto-flow: column;
+	grid-column-gap: 3rem;
+	margin-left: 10rem;
+}
+
+.socials-container a {
+	display: grid;
+	place-content: center;
+	grid-auto-flow: column;
+}
+
+.socials-container img {
+	width: 40px;
+	height: 40px;
+}
+
+.socials-container span {
+	margin-left: 1rem;
+	place-self: center;
+}
+
+/* Media */
+
+@media (max-width: 1375px) {
+	.showcase {
+		margin: 0;
+		width: 100vw;
+	}
+
+	.showcase img {
+		width: 30rem !important;
+		height: 30rem !important;
+		left: -8%;
+	}
+
+	.showcase-name {
+		width: 19rem;
+		margin: 0 0 0 2rem;
+		font-size: 2rem;
+	}
+
+	.showcase span {
+		left: 10%;
+		bottom: 40%;
+	}
+
+	@keyframes typing {
+		100% {
+			left: 100%;
+			margin: 0 -20px 0 20px;
+		}
+	}
+
+	.side-bar {
+		display: none;
+	}
+
+	.view-proj-btn {
+		position: absolute;
+		right: 5%;
+		bottom: 5%;
+		padding: 0.5rem;
+		border-radius: 2rem;
+		width: fit-content;
+		background: #d9d9d9;
+		color: #000 !important;
+		animation: quickfadeIn 2s normal;
+		z-index: 100;
+	}
+
+	@keyframes quickfadeIn {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	/* Projects section */
+
+	.projects-section {
+		position: relative;
+		overflow-y: scroll;
+	}
+
+	.projects-container {
+		grid-template-areas:
+			"r1c1"
+			"r1c2"
+			"r1c3";
+		margin: 0;
+	}
+
+	/* .view-contacts-btn {
+		position: fixed;
+		right: 5%;
+		bottom: 0;
+		padding: 0.5rem;
+		border-radius: 2rem;
+		width: fit-content;
+		background: #d9d9d9;
+		color: #000;
+		z-index: 10;
+	} */
+
+	/* Footer */
+
+	.contact-section {
+		display: none;
+	}
+}
+
+/* FONTS */
+
+.Karla {
+	font-family: sans-serif, Karla;
+}
+
+.text-m {
+	font-size: 1.1rem;
+}
+
+/* Toggle functions */
+
+.extend {
+	width: 7rem !important;
+}
+
+.dark {
+	background-color: rgb(27, 27, 27) !important;
+}
