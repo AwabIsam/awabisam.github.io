@@ -385,6 +385,7 @@ label:hover {
 	width: 7rem;
 	padding: 0.5rem 1rem;
 	justify-self: end !important;
+	color: #000;
 }
 
 .form-container textarea {
