@@ -320,6 +320,10 @@ label:hover {
 
 /* Form  Section */
 
+#section-3 {
+	overflow-y: scroll;
+}
+
 .form-section {
 	display: grid;
 	justify-content: center;
@@ -385,22 +389,6 @@ label:hover {
 	width: 7rem;
 	padding: 0.5rem 1rem;
 	justify-self: end !important;
-}
-
-.form-container button:hover {
-	animation: buttonAnimation 1s forwards;
-}
-
-@keyframes buttonAnimation {
-	0% {
-		background: white;
-		color: #000;
-	}
-	100% {
-		background: rgb(111, 0, 255);
-		background: linear-gradient(132deg, rgba(111, 0, 255, 1) 0%, rgba(107, 107, 107, 1) 100%);
-		color: #eeeeee;
-	}
 }
 
 .form-container textarea {
@@ -653,7 +641,7 @@ label:hover {
 		display: grid;
 		grid-auto-flow: column;
 		justify-content: space-around;
-		margin-bottom: 2rem;
+		margin-bottom: 5rem;
 	}
 
 	.arrow-up {
