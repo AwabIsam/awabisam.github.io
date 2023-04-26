@@ -65,7 +65,8 @@ label:hover {
 	height: 100vh;
 }
 
-.side-bar .line {
+.line {
+	transition: all 0.2s ease-in-out;
 	width: 5rem;
 	height: 0.25rem;
 	background-color: #d9d9d9;
@@ -184,7 +185,7 @@ label:hover {
 	color: rgb(24, 24, 24);
 }
 
-.projects-container a {
+.projects-container .btn {
 	/* margin-bottom: 3rem; */
 	display: grid;
 	place-content: center;
@@ -265,6 +266,10 @@ label:hover {
 .socials-container-projects {
 	display: none;
 }
+
+.contact-us-btn {
+	display: none;
+}
 /* Contacts Section */
 
 .contact-section {
@@ -313,6 +318,107 @@ label:hover {
 .arrow-up {
 	display: none;
 }
+
+/* Form  Section */
+
+.form-section {
+	display: grid;
+	justify-content: center;
+	height: 90vh;
+	color: #d9d9d9;
+}
+
+.form-header {
+	height: fit-content;
+	margin-top: 2rem;
+	font-size: 5rem;
+	font-weight: bolder;
+}
+
+.form-text {
+	text-align: center;
+}
+
+.form-container {
+	display: grid;
+	grid-template-areas:
+		"name email"
+		"phone poc"
+		"message message"
+		"submit submit";
+	grid-gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+.form-container div {
+	display: grid;
+	grid-auto-flow: row;
+	grid-gap: 0.5rem;
+	color: #d9d9d9;
+}
+
+.form-container div:nth-child(1) {
+	grid-area: "name";
+}
+.form-container div:nth-child(2) {
+	grid-area: "email";
+}
+.form-container div:nth-child(3) {
+	grid-area: "phone";
+}
+.form-container div:nth-child(4) {
+	grid-area: "poc";
+}
+.form-container div:nth-child(5) {
+	grid-column: span 2;
+	grid-area: "message";
+}
+
+.form-container button {
+	grid-column: span 2;
+	grid-area: "submit";
+	margin: 0 3rem;
+	font-weight: bold;
+	background: white;
+	place-self: center;
+	font-size: 1.1rem;
+	border-radius: 5px;
+	width: 7rem;
+	padding: 0.5rem 1rem;
+	justify-self: end !important;
+}
+
+.form-container button:hover {
+	animation: buttonAnimation 1s forwards;
+}
+
+@keyframes buttonAnimation {
+	0% {
+		background: white;
+		color: #000;
+	}
+	100% {
+		background: rgb(111, 0, 255);
+		background: linear-gradient(132deg, rgba(111, 0, 255, 1) 0%, rgba(107, 107, 107, 1) 100%);
+		color: #eeeeee;
+	}
+}
+
+.form-container textarea {
+	width: 99%;
+	height: 90%;
+	padding: 0;
+}
+
+.form-container input,
+.form-container input:active,
+.form-container textarea {
+	padding: 5px;
+	outline: none;
+	border: 2px solid #d9d9d9;
+	border-radius: 5px;
+}
+
 /* Media */
 
 @media (max-width: 1375px) {
@@ -379,10 +485,11 @@ label:hover {
 
 	.projects-section {
 		position: relative;
-		overflow: scroll;
+		overflow-y: scroll;
 	}
 
 	.projects-container {
+		position: relative;
 		grid-template-areas:
 			"r1c1"
 			"r1c2"
@@ -390,6 +497,27 @@ label:hover {
 		margin: 0;
 		padding-top: 300%;
 		padding-bottom: 100%;
+	}
+
+	.contact-us-btn {
+		display: block;
+		position: absolute;
+		right: -50%;
+		bottom: 2%;
+		padding: 0.5rem;
+		border-radius: 2rem;
+		width: 35%;
+		background: #d9d9d9;
+		color: #000 !important;
+		z-index: 100;
+	}
+
+	.form-section {
+		height: 100vh;
+	}
+
+	.form-section-container {
+		margin: 3rem;
 	}
 
 	/* Footer */
@@ -498,6 +626,27 @@ label:hover {
 		padding-bottom: 100%;
 	}
 
+	.contact-us-btn {
+		display: block;
+		position: absolute;
+		right: -50%;
+		bottom: 2%;
+		padding: 0.5rem;
+		border-radius: 2rem;
+		width: 35%;
+		background: #d9d9d9;
+		color: #000 !important;
+		z-index: 100;
+	}
+
+	.form-section {
+		height: 100vh;
+	}
+
+	.form-section-container {
+		margin: 3rem;
+	}
+
 	/* Footer */
 
 	.socials-container-projects {
@@ -531,7 +680,8 @@ label:hover {
 /* FONTS */
 
 .Karla {
-	font-family: sans-serif, Karla;
+	font-family: Karla;
+	font-weight: bold;
 }
 
 .text-m {
