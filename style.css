@@ -320,10 +320,6 @@ label:hover {
 
 /* Form  Section */
 
-#section-3 {
-	overflow-y: scroll;
-}
-
 .form-section {
 	display: grid;
 	justify-content: center;
