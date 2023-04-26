@@ -380,10 +380,9 @@ label:hover {
 	font-weight: bold;
 	background: white;
 	place-self: center;
-	font-size: 1.1rem;
+	font-size: 0.9rem;
 	border-radius: 5px;
-	width: 7rem;
-	padding: 0.5rem 1rem;
+	width: 5rem;
 	justify-self: end !important;
 	color: #000;
 }
