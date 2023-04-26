@@ -468,6 +468,7 @@ label:hover {
 
 	.projects-section {
 		position: relative;
+		overflow-y: scroll;
 	}
 
 	.projects-container {
@@ -595,6 +596,7 @@ label:hover {
 
 	.projects-section {
 		position: relative;
+		overflow-y: scroll;
 	}
 
 	.projects-container {
