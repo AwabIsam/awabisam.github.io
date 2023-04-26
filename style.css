@@ -116,7 +116,6 @@ label:hover {
 .showcase-name {
 	/* *for Typing animation*/
 	position: relative;
-
 	width: 48rem;
 	margin-bottom: 7rem;
 	font-size: 5rem;
@@ -565,7 +564,7 @@ label:hover {
 
 	.showcase-name {
 		width: 19rem;
-		margin: 0 0 0 2rem;
+		margin: 0 0 1rem 2rem;
 		font-size: 2rem;
 	}
 
@@ -629,7 +628,7 @@ label:hover {
 	.contact-us-btn {
 		display: block;
 		position: absolute;
-		right: -50%;
+		right: 0;
 		bottom: 2%;
 		padding: 0.5rem;
 		border-radius: 2rem;
@@ -644,7 +643,7 @@ label:hover {
 	}
 
 	.form-section-container {
-		margin: 3rem;
+		margin: 0 1rem;
 	}
 
 	/* Footer */
@@ -680,8 +679,7 @@ label:hover {
 /* FONTS */
 
 .Karla {
-	font-family: Karla;
-	font-weight: bold;
+	font-family: "Karla", sans-serif;
 }
 
 .text-m {
