@@ -65,6 +65,8 @@ label:hover {
 	height: 100vh;
 }
 
+/* *Create a socials bar that animates into the page */
+
 .line {
 	transition: all 0.2s ease-in-out;
 	width: 5rem;
@@ -120,6 +122,7 @@ label:hover {
 	margin-bottom: 7rem;
 	font-size: 5rem;
 	font-weight: bolder;
+	transition: all 0.5s ease-in-out;
 }
 
 .showcase-name::after {
@@ -148,6 +151,7 @@ label:hover {
 	left: 50%;
 	bottom: 35%;
 	font-size: 2rem;
+	transition: all 1s ease-in-out;
 }
 
 .showcase span::after {
@@ -162,6 +166,30 @@ label:hover {
 	border-left: 4px solid #d9d9d9;
 	animation: typing 2s steps(15) forwards;
 }
+
+/* ! You commented this part which has the paragraph animation */
+
+/* .showcase-p {
+	display: none;
+	position: absolute;
+	max-width: 500px;
+	top: 40%;
+	font-size: 1.5rem;
+	z-index: 10;
+	transition: all 0.5s ease-in-out;
+	opacity: 0;
+	animation: paraFadein 1s forwards;
+	margin-left: 2rem;
+}
+
+@keyframes paraFadein {
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+} */
 
 .label-area {
 	width: 170%;

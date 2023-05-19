@@ -51,27 +51,33 @@ labelAreas.forEach((line) => {
 });
 
 // Text Animation
-const animationedObject = document.querySelector(".showcase-name");
-const toBeanimated = document.querySelector(".showcase-p");
+const showcaseName = document.querySelector(".showcase-name");
+const showcaseTitle = document.querySelector(".showcase-title");
+const Lotus = document.querySelector("#lotus");
+const showcasePara = document.querySelector(".showcase-p");
+const viewProjbtn = document.querySelector(".view-proj-btn");
 
-animationedObject.addEventListener("animationend", () => {
-	toBeanimated.style.display = "block";
+showcaseName.addEventListener("animationend", () => {
+	showcaseTitle.style.display = "block";
 });
 
 // Lotus Animation
 
-const animationedText = document.querySelector(".showcase-p");
-const toBeanimatedLotus = document.querySelector("#lotus");
-animationedText.addEventListener("animationend", () => {
-	toBeanimatedLotus.style.display = "block";
+showcaseTitle.addEventListener("animationend", () => {
+	Lotus.style.display = "block";
 });
 
 // After lotus animation
 
-const animationedLotus = document.querySelector("#lotus");
-const toBeViewed = document.querySelector(".view-proj-btn");
-if (visualViewport.width < "1375") {
-	animationedLotus.addEventListener("animationend", () => {
-		toBeViewed.style.display = "block";
-	});
-}
+// Lotus.addEventListener("animationend", () => {
+// 	if (visualViewport.width < "1375") {
+// 		viewProjbtn.style.display = "block";
+// 	}
+// 	showcaseName.style.transform = "translate(0, -100%)";
+// 	showcaseTitle.style.transform = "translate(-1000%, 0)";
+// 	showcaseTitle.style.opacity = "0";
+// 	showcasePara.style.display = "block";
+// });
+// console.log(showcaseName);
+// console.log(Lotus);
+// console.log(showcaseTitle);
